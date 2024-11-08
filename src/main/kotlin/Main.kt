@@ -61,18 +61,25 @@ fun App() {
         }
         // 2 Columnas
         Row(
-            modifier = Modifier.fillMaxSize().background(Color.Red)
+            modifier = Modifier.fillMaxSize()
         ) {
+            // Publicaciones
             Column(
                 modifier = Modifier
-                    .padding(start = 15.dp, end = 15.dp)
                     .fillMaxHeight()
-                    .background(Color.Cyan),
+                    .background(Color.Cyan)
+                    .weight(1f),
 
             ) {
 
             }
-            Column {
+            // Sugerencias
+            Column(
+                modifier = Modifier
+                    .fillMaxHeight()
+                    .background(Color.Yellow)
+                    .weight(1f),
+            ) {
 
             }
         }
