@@ -13,6 +13,7 @@ val users = listOf<Account>(
 )
 
 val publications = listOf<Publication>(
-    Publication("")
+    Publication("publish1.jpeg"),
+    Publication("publish2.jpeg")
 )
 
