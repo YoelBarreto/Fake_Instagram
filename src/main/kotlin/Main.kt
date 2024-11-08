@@ -71,13 +71,20 @@ fun App() {
                     .weight(1f),
 
             ) {
-                Row {
+                Row(modifier = Modifier.padding(10.dp)) {
                     Text(
                         text = "Publicaciones",
-                        modifier = Modifier.padding(10.dp),
+                        modifier = Modifier,
                         fontSize = 30.sp,
                         fontWeight =  FontWeight.Bold
                     )
+                }
+                Row {
+                    publications.forEach{ publication ->
+                        Box(modifier = Modifier.padding(20.dp)){
+
+                        }
+                    }
                 }
             }
             // Sugerencias
@@ -88,12 +95,17 @@ fun App() {
                     .weight(1f),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Text(
-                    text = "Historias",
-                    modifier = Modifier.padding(10.dp),
-                    fontSize = 30.sp,
-                    fontWeight =  FontWeight.Bold
-                )
+                Row {
+                    Text(
+                        text = "Historias",
+                        modifier = Modifier.padding(10.dp),
+                        fontSize = 30.sp,
+                        fontWeight =  FontWeight.Bold
+                    )
+                }
+                Row {
+
+                }
 
             }
         }
