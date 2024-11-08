@@ -1,4 +1,5 @@
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.*
@@ -47,7 +48,7 @@ fun App() {
                         Box(modifier = Modifier.padding(12.dp)){
                             Column(horizontalAlignment = Alignment.CenterHorizontally) {
                                 Image(painterResource(
-                                    resourcePath = "${user.image}"),
+                                    resourcePath = user.image),
                                     contentDescription = "Profile",
                                     modifier = Modifier.width(60.dp).clip(CircleShape)
                                 )
@@ -56,6 +57,23 @@ fun App() {
                         }
                     }
                 }
+            }
+        }
+        // 2 Columnas
+        Row(
+            modifier = Modifier.fillMaxSize().background(Color.Red)
+        ) {
+            Column(
+                modifier = Modifier
+                    .padding(start = 15.dp, end = 15.dp)
+                    .fillMaxHeight()
+                    .background(Color.Cyan),
+
+            ) {
+
+            }
+            Column {
+
             }
         }
     }
