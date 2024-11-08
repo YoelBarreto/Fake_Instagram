@@ -71,7 +71,14 @@ fun App() {
                     .weight(1f),
 
             ) {
-
+                Row {
+                    Text(
+                        text = "Publicaciones",
+                        modifier = Modifier.padding(10.dp),
+                        fontSize = 30.sp,
+                        fontWeight =  FontWeight.Bold
+                    )
+                }
             }
             // Sugerencias
             Column(
@@ -79,7 +86,14 @@ fun App() {
                     .fillMaxHeight()
                     .background(Color.Yellow)
                     .weight(1f),
+                horizontalAlignment = Alignment.CenterHorizontally
             ) {
+                Text(
+                    text = "Historias",
+                    modifier = Modifier.padding(10.dp),
+                    fontSize = 30.sp,
+                    fontWeight =  FontWeight.Bold
+                )
 
             }
         }
