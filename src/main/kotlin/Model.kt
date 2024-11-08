@@ -1,6 +1,6 @@
 
 data class Account(val name: String , val image: String)
-data class Publication(val imagePublication: String)
+data class Publication(val imagePublication: String, val name: String , val image: String)
 
 val users = listOf<Account>(
     Account("perez_toledo", "img1.jpeg"),
@@ -13,7 +13,7 @@ val users = listOf<Account>(
 )
 
 val publications = listOf<Publication>(
-    Publication("publish1.jpeg"),
-    Publication("publish2.jpeg")
+    Publication("publish1.jpeg", "felipe1923", "img4.jpeg"),
+    Publication("publish2.jpeg", "ortfrutas", "img5.jpeg")
 )
 

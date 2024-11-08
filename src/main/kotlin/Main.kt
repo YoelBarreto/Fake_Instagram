@@ -50,7 +50,7 @@ fun App() {
                                 Image(painterResource(
                                     resourcePath = user.image),
                                     contentDescription = "Profile",
-                                    modifier = Modifier.width(60.dp).clip(CircleShape)
+                                    modifier = Modifier.width(65.dp).clip(CircleShape)
                                 )
                                 Text(text = user.name)
                             }
@@ -67,7 +67,6 @@ fun App() {
             Column(
                 modifier = Modifier
                     .fillMaxHeight()
-                    .background(Color.Cyan)
                     .weight(1f),
 
             ) {
@@ -81,8 +80,17 @@ fun App() {
                 }
                 Row {
                     publications.forEach{ publication ->
-                        Box(modifier = Modifier.padding(20.dp)){
-
+                        Box(modifier = Modifier.padding(20.dp).background(Color.DarkGray).fillMaxSize()){
+                            Column(verticalArrangement = Arrangement.Center,) {
+                                Row(modifier = Modifier.fillMaxWidth().background(Color.LightGray)) {
+                                    Image(painterResource(
+                                        resourcePath = publication.image),
+                                        contentDescription = "Profile",
+                                        modifier = Modifier.width(45.dp).clip(CircleShape)
+                                    )
+                                    Text(publication.name, modifier = Modifier)
+                                }
+                            }
                         }
                     }
                 }
@@ -91,7 +99,6 @@ fun App() {
             Column(
                 modifier = Modifier
                     .fillMaxHeight()
-                    .background(Color.Yellow)
                     .weight(1f),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
@@ -116,7 +123,7 @@ fun main() = application {
     Window(
         onCloseRequest = ::exitApplication,
         title = "Pistagrom",
-        state = rememberWindowState(width = 800.dp, height = 800.dp)
+        state = rememberWindowState(width = 1000.dp, height = 800.dp)
     ) {
         App()
     }
